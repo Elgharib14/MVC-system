@@ -1,0 +1,34 @@
+﻿@using Demo.DAL.Model;
+@model Department
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Are you sure to Delete this Department ?</h1>
+
+<form class="container" asp-action="Delete">
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Code"></label>
+        <input asp-for="Code" class="form-control" readonly />
+
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" readonly />
+
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="DateTimeCreation"></label>
+        <input asp-for="DateTimeCreation" class="form-control" readonly />
+
+    </div>
+    <br />
+
+    <center>
+        <a asp-controller="Department" asp-action="Index" class="btn btn-primary">Cancle</a>
+        <a asp-controller="Department" asp-action="Edit" class="btn btn-success" asp-route-id="@Model.Id">Edit</a>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </center>
+</form>

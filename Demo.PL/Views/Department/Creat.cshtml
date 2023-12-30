@@ -1,0 +1,48 @@
+﻿@using Demo.DAL.Model;
+
+@model Department
+@{
+    ViewData["Title"] = "Creat";
+}
+<br />
+<h1 class="container">Creat New Department</h1>
+<br />
+
+
+
+<form class="container"  asp-action="Creat">
+    <div asp-validation-summary="All">
+        @* To Collect all Error  *@
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Code"></label>
+        <input asp-for="Code" class="form-control" />
+        <span asp-validation-for="Code" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="DateTimeCreation"></label>
+        <input asp-for="DateTimeCreation" class="form-control" />
+        <span asp-validation-for="DateTimeCreation" class="text-danger"></span>
+    </div>
+    <br />
+    
+    <center>
+        <input type="submit" value="submit" class="btn btn-primary" />
+        <a asp-controller="Department" asp-action="Index" class="btn btn-light">Back to List</a>
+    </center>
+   
+</form>
+
+
+@section Valdition{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

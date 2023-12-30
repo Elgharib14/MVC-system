@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@* 
+<div>
+    @ViewData["Message"]
+     @ViewData["Count"] 
+     @ViewBag.ff
+     @ViewBag.ss
+</div>
+ *@<br />
+<a class="btn btn-warning" asp-controller="Department" asp-action="Creat">Create New Department</a>
+
+<br />
+<br />
+
+<table class="table table-bordered table-striped table-hover js-basic-example dataTable text-center font-weight-bold">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Code</th>
+            <th>DateCreation</th>
+            <th>Details</th>
+            <th>Edit</th>
+            <th>Delet</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dep in Model)
+            {
+                <tr>
+                    <td>@dep.Name</td>
+                    <td>@dep.Code</td>
+                    <td>@dep.DateTimeCreation.Date</td>
+
+
+                <partial name="_ButtonPartialView"  model="@dep.Id"/>
+
+                    
+
+                </tr>
+                
+            }
+       
+       
+    </tbody>
+</table>
+
+
+@section Valdition{
+    @*   <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script> *@
+
+    <partial name="_valditionScript" />
+}

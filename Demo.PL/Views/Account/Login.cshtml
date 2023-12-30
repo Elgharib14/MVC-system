@@ -1,0 +1,38 @@
+﻿@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/auth-Layout.cshtml";
+}
+
+<h1>Login</h1>
+
+<div class="container">
+    <form  asp-action="Login" method="post" class="form">
+        <h2>Hey bub, ya gotta Login!</h2>
+
+     
+
+      
+
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input asp-for="Email" placeholder="Enter email" />
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="password">Password</label>
+            <input asp-for="Password" placeholder="Enter password" />
+            <small>Error message</small>
+        </div>
+     
+        <button type="submit">Submit</button>
+        <center><p>Don't have an acount <a asp-action="Register">Register Now!</a></p></center>
+        <center><p> <a asp-action="ForgetPassword">Forget Password!</a></p></center>
+    </form>
+
+</div>
+
+@section Valdition{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

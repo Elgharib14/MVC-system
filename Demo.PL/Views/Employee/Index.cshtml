@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+<a class="btn btn-warning" asp-controller="Employee" asp-action="Creat">Create New Employee</a>
+
+<br />
+<br />
+
+<div class=" row justify-content-center align-items-center mt-5">
+    <form asp-action="Index" class="row col-8 offset-1">
+        <div class="col-8">
+            <input type="text" class="form-control" name="SearchValue" placeholder="Search By Name" />
+        </div>
+        <div class="col-4">
+            <input type="submit" value="Search" class="btn btn-success"/>
+        </div>
+    </form>
+</div>
+<br />
+<br />
+
+<table class="table table-bordered table-striped table-hover js-basic-example dataTable text-center font-weight-bold">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Adders</th>
+            <td>Image</td>
+            <th>Salary</th>
+            <th>Email</th>
+          
+            <th>Details</th>
+            <th>Edit</th>
+            <th>Delet</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+            {
+                <tr>
+                <td>@emp.Name</td>
+                <td>@emp.Department?.Name</td>
+                <td>@emp.Adders</td>
+                <td><img src="~/Images/@emp.ImageName"  class="img-fluid rounded" alt="EmployeeImage" height="50" width="100"/></td>
+                <td>@emp.Salary</td>
+                <td>@emp.Email</td>
+                <partial name="_ButtonPartialView" model="@emp.Id" />
+                </tr>
+                
+            }
+       
+       
+    </tbody>
+</table>
