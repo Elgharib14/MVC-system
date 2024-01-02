@@ -17,3 +17,11 @@ The project follows a three-tier architecture, which separates the application i
 - The data access layer(Demo.DAL) provides an abstraction for accessing and manipulating data from the underlying database. It handles the storage and retrieval of data, ensuring data integrity and security.
 
 # The Project
+![1](https://github.com/Elgharib14/MVC-system/assets/98536315/378c0459-0281-49f1-87da-e80280297fe9)
+![Capture](https://github.com/Elgharib14/MVC-system/assets/98536315/80333937-daac-49c1-a2d8-55c43df21590)
+![2](https://github.com/Elgharib14/MVC-system/assets/98536315/96d6db59-cf57-4e35-b891-9f331ba49b03)
+![3](https://github.com/Elgharib14/MVC-system/assets/98536315/eee4ebc9-a74d-4f58-8a93-b6760fb391d9)
+![4](https://github.com/Elgharib14/MVC-system/assets/98536315/4d921c8e-5f3e-43a5-a2e0-f0e56a8fbda7)
+![5](https://github.com/Elgharib14/MVC-system/assets/98536315/a7aa3510-b52a-49b8-aae0-1b968cfaf687)
+![6](https://github.com/Elgharib14/MVC-system/assets/98536315/57455128-da73-4136-bf77-6cef8aef0b31)
+
