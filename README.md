@@ -25,3 +25,5 @@ The project follows a three-tier architecture, which separates the application i
 ![5](https://github.com/Elgharib14/MVC-system/assets/98536315/a7aa3510-b52a-49b8-aae0-1b968cfaf687)
 ![6](https://github.com/Elgharib14/MVC-system/assets/98536315/57455128-da73-4136-bf77-6cef8aef0b31)
 
+# Contact
+- If you have any questions or suggestions, feel free to contact hos246amer@gmail.com.
